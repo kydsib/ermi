@@ -1,0 +1,71 @@
+@import '@styles/colors.module.scss';
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+}
+.options {
+  font-size: 0.75rem;
+  color: $primary-gray;
+
+  &--black {
+    color: $primary-black;
+  }
+
+  &--left {
+    margin-left: -0.5rem;
+  }
+}
+
+.delivery {
+  display: flex;
+  align-items: center;
+  padding-top: .375rem;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: $primary-gray;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: .425rem;
+  }
+
+  &--value {
+    color: $primary-black;
+  }
+}
+
+.info-block {
+  padding-top: .5rem;
+}
+
+.items-info {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1;
+  list-style-position: inside;
+  margin-bottom: .375rem;
+}
+
+.available {
+  display: block;
+  background-color: $delivery-yes;
+  height: .5rem;
+  width: .5rem;
+}
+
+.not_available {
+  display: block;
+  background-color: $delivery-not;
+  height: .5rem;
+  width: .5rem;
+}

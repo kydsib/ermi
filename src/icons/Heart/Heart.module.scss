@@ -1,0 +1,14 @@
+@import '@styles/colors.module.scss';
+
+.container {
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  bottom: .75rem;
+  right: .75rem;
+}
+
+.heart {
+  color: $heart; 
+}
+

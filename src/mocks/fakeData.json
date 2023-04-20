@@ -1,0 +1,27 @@
+{
+  "title": "Keraminės sienų plytelės PIGALLE BLACK, 20 x 50 cm",
+  "mainImage": "https://cdn.ermitazas.lt/product/1/5/6/6/1566b5b7d37c5bc020dbea1e924d6dbec474c842/00ef8b4df2845e08f208d037320d74705c066921.jpg?width=576",
+  "price": {
+    "mainPrice": 21.99,
+    "discountPrice": 10.99,
+    "pricePerSquare": 9.99
+  },
+  "highlights": [
+    {
+      "title": "Atsparumas šalčiui",
+      "value": "Ne"
+    },
+    {
+      "title": "Kiekis pakuotėje, m2",
+      "value": "1.1"
+    },
+    {
+      "title": "Blizgumas",
+      "value": "Matinis"
+    }
+  ],
+  "availableShipping": [
+    "cnc",
+    "hd"
+  ]
+}
