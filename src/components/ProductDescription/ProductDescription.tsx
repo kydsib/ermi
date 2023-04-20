@@ -1,7 +1,8 @@
 
 import styles from './ProductDescription.module.scss';
 
-const shippingBlock = (delivery) => {
+
+const shippingBlock = (delivery :Array<string>) => {
   if (delivery?.includes('hd') && delivery?.includes('cnc')) {
     return (
       <div>
@@ -33,7 +34,16 @@ const shippingBlock = (delivery) => {
   }
 }
 
-const ProductDescription = ({ title, highlights, delivery }) => {
+interface ProductDescriptionProps {
+  title: string;
+  highlights: {
+    title: string;
+    value: string;
+  }[];
+  delivery: string[];
+}
+
+const ProductDescription = ( {title, highlights, delivery} :ProductDescriptionProps  ) => {
 
   const infoBlock = highlights?.map((highlight) => (
     <ul key={highlight.title} className={styles["items-info"]}>

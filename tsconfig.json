@@ -21,7 +21,6 @@
       "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
       "@mocks/*": ["mocks/*"],
-      "@utils/*": ["utils/*"],
       "@icons/*": ["icons/*"],
     }
   },

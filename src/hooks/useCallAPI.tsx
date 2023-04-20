@@ -1,36 +1,49 @@
 import { useState, useEffect } from 'react';
 
 import fakeData from '@mocks/fakeData.json';
-import {Product} from '@utils/ProductInterface'
+
+type ApiResponse = {
+  title: string;
+  mainImage: string;
+  price: {
+    mainPrice: number;
+    discountPrice: number;
+    pricePerSquare: number;
+  };
+  highlights: {
+    title: string;
+    value: string;
+  }[];
+  availableShipping: string[];
+};
 
 
 const useCallApi = () => {
-  const [response, setResponse] = useState<Product[]>([]);
-  const [error, setError] = useState('');
+  const [response, setResponse] = useState<ApiResponse>();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = new Promise((resolve) => {
+        const response = await new Promise((resolve) => {
           setTimeout(() => {
             resolve(fakeData);
           }, 1000);
         });
-
-        const data = await response;
-        setResponse(data as Product[]);
-  
-        setIsLoading(false);
+        setResponse(response as ApiResponse);
       } catch (error: any ) { 
-        setError(error.message);
+        console.error(error, 'error');
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchData();
   }, []);
 
-  return { response, error, isLoading };
+
+  return { response, isLoading };
+  
 }
 
 export default useCallApi;

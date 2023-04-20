@@ -1,5 +1,10 @@
 import styles from './Button.module.scss';
 
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick: () => void;
+}
+
 const Button = (props: ButtonProps) => {
   const { children, onClick } = props;
   return (
