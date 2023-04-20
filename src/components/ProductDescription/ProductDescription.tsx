@@ -48,7 +48,7 @@ const ProductDescription = ( {title, highlights, delivery} :ProductDescriptionPr
   const infoBlock = highlights?.map((highlight) => (
     <ul key={highlight.title} className={styles["items-info"]}>
       <li className={styles.options}>
-        <span className={styles["options--left"]}>{highlight.title}</span>: <span className={styles["options--black"]}>{highlight.value}</span></li>
+        <span >{highlight.title}</span>: <span className={styles["options--black"]}>{highlight.value}</span></li>
     </ul>
   ))
 
